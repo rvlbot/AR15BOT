@@ -55,9 +55,9 @@ const arrayBulan = ['Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Jul
 const bulan = arrayBulan[moment().format('MM') - 1]
 
 const config = {
-    A187: '👾AR15BOT👾', // TOBAT SU ASU
-    instagram: 'https://instagram.com/_sadboy.ig', // INFO JANGAN DI UBAH
-    nomer: 'wa.me/6285722553839', // INFO SU JNGAN DI UBAH
+    A187: 'ZXYZ BOT', // TOBAT SU ASU
+    instagram: 'https://instagram.com/_its.rival', // INFO JANGAN DI UBAH
+    nomer: 'wa.me/6285762102148', // INFO SU JNGAN DI UBAH
     youtube: 'https://youtube.com/channel/UCGYLWtyT9IADYNUiK0uZiGg', // KINTIL
     whatsapp: 'https://chat.whatsapp.com/DSSHmG2KjKJLoFp9B9mkVs', // BABI
     tanggal: `TANGGAL: ${moment().format('DD')} ${bulan} ${moment().format('YYYY')}`,
@@ -176,7 +176,7 @@ client.on('group-participants-update', async (anu) => {
 			}
 
 			const botNumber = client.user.jid
-			const ownerNumber = ["6285722553839@s.whatsapp.net"] // ganti nomer lu
+			const ownerNumber = ["6285762102148@s.whatsapp.net"] // ganti nomer lu
 			const isGroup = from.endsWith('@g.us')
 			const sender = isGroup ? mek.participant : mek.key.remoteJid
 			const groupMetadata = isGroup ? await client.groupMetadata(from) : ''
