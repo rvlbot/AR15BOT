@@ -530,7 +530,7 @@ client.on('group-participants-update', async (anu) => {
 					for (let _ of anu) {
 						client.deleteChat(_.jid)
 					}
-					reply('𝗰𝗹𝗲𝗮𝗿 𝗮𝗹𝗹 𝘀𝘂𝗸𝘀𝗲𝘀 𝘆𝗮𝗵 𝘁𝗼𝗱 :)')
+					reply('𝗰𝗹𝗲𝗮𝗿 𝗮𝗹𝗹 𝘀𝘂𝗸𝘀𝗲𝘀 *!!* :)')
 					break
 			       case 'block':
 					if (!isGroup) return reply(mess.only.group)
@@ -558,12 +558,12 @@ client.on('group-participants-update', async (anu) => {
 						const encmedia = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek
 						buff = await client.downloadMediaMessage(encmedia)
 						for (let _ of anu) {
-							client.sendMessage(_.jid, buff, image, {caption: `❮ 𝙋𝙀𝙎𝘼𝙉 𝘽𝙍𝙊𝘼𝘿𝘾𝘼𝙎𝙏 ❯\n\n${body.slice(4)}`})
+							client.sendMessage(_.jid, buff, image, {caption: `❮ *BROADCAST* ❯\n\n${body.slice(4)}`})
 						}
 						reply('𝙨𝙪𝙘𝙘𝙚𝙨𝙨 𝙗𝙧𝙤𝙖𝙙𝙘𝙖𝙨𝙩 ')
 					} else {
 						for (let _ of anu) {
-							sendMess(_.jid, `❮ 𝙋𝙀𝙎𝘼𝙉 𝘽𝙍𝙊𝘼𝘿𝘾𝘼𝙎𝙏 ❯\n\n${body.slice(4)}`)
+							sendMess(_.jid, `❮ *BROADCAST* ❯\n\n${body.slice(4)}`)
 						}
 						reply('𝙨𝙪𝙘𝙘𝙚𝙨𝙨 𝙗𝙧𝙤𝙖𝙙𝙘𝙖𝙨𝙩 ')
 					}
