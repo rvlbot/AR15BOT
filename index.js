@@ -160,18 +160,18 @@ client.on('group-participants-update', async (anu) => {
 			const isCmd = body.startsWith(prefix)
 
 			mess = {
-				wait: '❬❗❭ 𝗪𝗔𝗜𝗧, 𝗹𝗮𝗴𝗶 𝗽𝗿𝗼𝘀𝗲𝘀',
+				wait: '❬❗❭ 𝗪𝗔𝗜𝗧 *Tunggu Sebentar!!*',
 				success: '️❬ ✔ ❭ 𝘀𝘂𝗰𝗰𝗲𝘀𝘀 𝘁𝗼𝗱🖤',
 				error: {
 					stick: '𝗬𝗲𝗮𝗵 𝗴𝗮𝗴𝗮𝗹 ;(, 𝘂𝗹𝗮𝗻𝗴𝗶 𝗹𝗮𝗴𝗶 𝘆𝗮𝗵 𝘁𝗼𝗱 ^_^',
 					Iv: '𝗠𝗮𝗮𝗳 𝗹𝗶𝗻𝗸 𝘁𝗶𝗱𝗮𝗸 𝘃𝗮𝗹𝗶𝗱☹️'
 				},
 				only: {
-					group: '❬❗❭ 𝗚𝗥𝗢𝗨𝗣 𝗢𝗡𝗟𝗬 𝗧𝗢𝗗',
-					ownerG: '❬❗❭ 𝗢𝗪𝗡𝗘𝗥 𝗢𝗡𝗟𝗬 𝗧𝗢𝗗',
-					ownerB: '❬❗❭  𝗢𝗪𝗡𝗘𝗥 𝗢𝗡𝗟𝗬 𝗧𝗢𝗗',
-					admin: '❬❗❭ 𝗔𝗗𝗠𝗜𝗡 𝗢𝗡𝗟𝗬 𝗧𝗢𝗗',
-					Badmin: '❬❗❭ 𝗕𝗢𝗧 𝗛𝗔𝗥𝗨𝗦 𝗝𝗔𝗗𝗜 𝗔𝗗𝗠𝗜𝗡 𝗧𝗢𝗗'
+					group: '❬❗❭ 𝗚𝗥𝗢𝗨𝗣 𝗢𝗡𝗟𝗬',
+					ownerG: '❬❗❭ 𝗢𝗪𝗡𝗘𝗥 𝗢𝗡𝗟𝗬',
+					ownerB: '❬❗❭  𝗢𝗪𝗡𝗘𝗥 𝗢𝗡𝗟𝗬',
+					admin: '❬❗❭ 𝗔𝗗𝗠𝗜𝗡 𝗢𝗡𝗟𝗬',
+					Badmin: '❬❗❭ 𝗕𝗢𝗧 𝗛𝗔𝗥𝗨𝗦 𝗝𝗔𝗗𝗜 𝗔𝗗𝗠𝗜𝗡 '
 				}
 			}
 
@@ -364,7 +364,7 @@ client.on('group-participants-update', async (anu) => {
 					ranm = getRandom('.mp3')
 					rano = getRandom('.ogg')
 					dtt.length > 300
-					? reply('𝗜𝗱𝗶𝗵 𝗻𝗴𝗲𝗹𝘂𝗻𝗷𝗮𝗸 𝗻𝗴𝗲𝗻𝘁𝗼𝗱, 𝘁𝗲𝗸𝘀𝗻𝘆𝗮 𝗷𝗮𝗻𝗴𝗮𝗻 𝗸𝗲𝗽𝗮𝗻𝗷𝗮𝗻𝗴𝗮𝗻 😤')
+					? reply('*JANGAN TERLALU PANJANG TEXTNYA!!*')
 					: gtts.save(ranm, dtt, function() {
 						exec(`ffmpeg -i ${ranm} -ar 48000 -vn -c:a libopus ${rano}`, (err) => {
 							fs.unlinkSync(ranm)
@@ -399,7 +399,7 @@ client.on('group-participants-update', async (anu) => {
 						client.sendMessage(from, buffer, image, {quoted: mek, caption: 'Ingat! Citai Lolimu'})
 					} catch (e) {
 						console.log(`Error :`, color(e,'red'))
-						reply('𝗘𝗥𝗥𝗢𝗥 𝗧𝗢𝗗')
+						reply('*ADA YANG ERROR*')
 					}
 					break
 				case 'nsfwloli': 
@@ -410,7 +410,7 @@ client.on('group-participants-update', async (anu) => {
 						client.sendMessage(from, buffer, image, {quoted: mek, caption: 'Jangan jadiin bahan buat comli om'})
 					} catch (e) {
 						console.log(`Error :`, color(e,'red'))
-						reply('𝗘𝗥𝗥𝗢𝗥 𝗧𝗢𝗗')
+						reply('*ADA YANG ERROR*')
 					}
 					break
 				case 'hilih': 
@@ -430,7 +430,7 @@ client.on('group-participants-update', async (anu) => {
 					client.sendMessage(from, buffer, audio, {mimetype: 'audio/mp4', filename: `${anu.title}.mp3`, quoted: mek})
 					break
 				case 'ytsearch': 
-					if (args.length < 1) return reply('𝘆𝗮𝗻𝗴 𝗺𝗮𝘂 𝗱𝗶𝗰𝗮𝗿𝗶 𝗮𝗽𝗮 𝘁𝗼𝗱? 𝘁𝘆𝘁𝗱 𝗸𝗮𝗵?')
+					if (args.length < 1) return reply('*Maaf Fitur Ini Error!!*')
 					anu = await fetchJson(`https://mhankbarbars.herokuapp.com/api/ytsearch?q=${body.slice(10)}&apiKey=${apiKey}`, {method: 'get'})
 					if (anu.error) return reply(anu.error)
 					teks = '=================\n'
@@ -463,7 +463,7 @@ client.on('group-participants-update', async (anu) => {
 					break
 				case 'nulis': 
 				case 'tulis':
-					if (args.length < 1) return reply('𝘁𝗲𝗿𝘂𝘀 𝗮𝗸𝘂 𝘀𝘂𝗿𝘂𝗵 𝗻𝘂𝗹𝗶𝘀 𝗮𝗽𝗮 𝘁𝗼𝗱? 𝗻𝘂𝗹𝗶𝘀 𝘁𝘆𝘁𝗱 𝗴𝗶𝘁𝘂?')
+					if (args.length < 1) return reply('*Maaf Fitur Ini Error!!*')
 					teks = body.slice(7)
 					reply(mess.wait)
 					anu = await fetchJson(`https://mhankbarbars.herokuapp.com/nulis?text=${teks}&apiKey=${apiKey}`, {method: 'get'})
