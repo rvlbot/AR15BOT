@@ -164,7 +164,7 @@ client.on('group-participants-update', async (anu) => {
 				success: '️❬ ✔ ❭ 𝘀𝘂𝗰𝗰𝗲𝘀𝘀 𝘁𝗼𝗱🖤',
 				error: {
 					stick: '*[GAGAL]* *Coba Lagi Yah...*'
-				    lv: '❌ Link tidak valid ❌'
+				        Iv: '❌ Link tidak valid ❌'
 				},
 				only: {
 					group: '❬❗❭ 𝗚𝗥𝗢𝗨𝗣 𝗢𝗡𝗟𝗬',
